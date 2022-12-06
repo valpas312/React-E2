@@ -1,19 +1,17 @@
 import React from 'react'
-import './Navbar.css'
-import { NavLink, useNavigate } from 'react-router-dom'
-
+import { StyledNav, StyledLink, StyledNavChild } from '../StyledComponents/StyledNavbar'
 
 const NavBar = ({children}) => {
-  return (<div>
-  <div className="nav-container">
-    <NavLink to={'/'}>Home</NavLink>
-    <NavLink to={'ToDo'}>Lista de tareas</NavLink>
-    <NavLink to={'Pokedex'}>Pokedex</NavLink>
-  </div>
-    <div>
+  return (<>
+  <StyledNav>
+    <StyledLink to={'/'}>Home</StyledLink>
+    <StyledLink to={'ToDo'}>Lista de tareas</StyledLink>
+    <StyledLink to={'Pokedex'}>Pokedex</StyledLink>
+  </StyledNav>
+    <StyledNavChild>
         {children}
-    </div>
-  </div>
+    </StyledNavChild>
+  </>
   )
 }
 

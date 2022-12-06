@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: burlywood;
+    background-color: #616283;
     padding: 1rem;
     border-radius: 15px;
     width: 20vw;
@@ -19,7 +19,7 @@ export const StyledForm = styled.form`
     input{
         padding: 1rem;
         border: none;
-        background-color: beige;
+        background-color: white;
         border-radius: 15px;
         width: 100%;
     }

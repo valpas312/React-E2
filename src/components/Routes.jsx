@@ -4,6 +4,8 @@ import Home from './Home'
 import NavBar from './NavBar'
 import Pokedex from './Pokedex'
 import ToDoForm from './ToDoForm'
+import './Routes.css'
+
 
 const Routes = () => {
   return (
