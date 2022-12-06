@@ -11,10 +11,11 @@ const Routes = () => {
   return (
     <BrowserRouter>
     <NavBar>
-        <RoutesRouterDom>
+        <RoutesRouterDom >
             <Route path='/' element={<Home/>}/>
             <Route path='ToDo' element={<ToDoForm/>}/>
             <Route path='Pokedex' element={<Pokedex/>}/>
+            <Route path='*' element={<Home/>}/>
         </RoutesRouterDom>
     </NavBar>
     </BrowserRouter>

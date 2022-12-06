@@ -12,7 +12,6 @@ export const StyledNav = styled.div`
 `
 
 export const StyledLink = styled(NavLink)`
-    color: white;
     font-size: 1.5rem;
 `
 

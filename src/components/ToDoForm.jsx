@@ -10,7 +10,7 @@ const ToDoForm = () => {
 
     const handleChange = e => setTodo({[e.target.name]: e.target.value})
 
-    const handleClickEmpty = e => setTodos([])
+    const handleClickEmpty = () => setTodos([])
 
     const handleClick = () => {
         if(Object.keys(todo).length === 0 || todo.todo.trim() === '') {
@@ -18,6 +18,7 @@ const ToDoForm = () => {
             return
         }
         setTodos([...todos, todo])
+        console.log(todos)
     }
 
     const deleteTodo = indice => {
