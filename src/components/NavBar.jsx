@@ -1,18 +1,19 @@
 import React from 'react'
+import './Navbar.css'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 
 const NavBar = ({children}) => {
-    const navigate = useNavigate()
-  return (<>
-    <p onClick={() => navigate('/')}>Logo</p>
+  return (<div>
+  <div className="nav-container">
     <NavLink to={'/'}>Home</NavLink>
     <NavLink to={'ToDo'}>Lista de tareas</NavLink>
-    <NavLink to={'About'}>Acerca</NavLink>
+    <NavLink to={'Pokedex'}>Pokedex</NavLink>
+  </div>
     <div>
         {children}
     </div>
-  </>
+  </div>
   )
 }
 

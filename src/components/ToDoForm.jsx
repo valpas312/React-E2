@@ -27,7 +27,7 @@ const ToDoForm = () => {
     }
 
     return (
-        <>
+        <div className='form-container'>
             <StyledForm onSubmit={e => e.preventDefault()}>
                 <label>Agregar tarea</label><br />
                 <input type="text" name="todo" onChange={handleChange}/>
@@ -41,7 +41,7 @@ const ToDoForm = () => {
             }
 
             {console.log(todos)}
-        </>
+        </div>
     )
 }
 
