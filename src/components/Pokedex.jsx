@@ -5,15 +5,16 @@ const Pokedex = () => {
   const [pokemon, setPokemon] = useState(null);
   const [id, setId] = useState('');
 
-  const handleClick = () => {
+  const HandleClick = () => {
       axios
         .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then((res) => {
             console.log(res.data)
             setPokemon(res.data)
         })
-        .catch((err) => console.error(err));
-  }
+        .catch((err) => console.error(err))
+    }
+    
   return (
     <>
     <form onSubmit={e => e.preventDefault()}>
@@ -22,9 +23,13 @@ const Pokedex = () => {
         type="text"
         placeholder="ID del Pokémon"
         value={id}
-        onChange={e => setId(e.target.value)}
+        onChange={e => (
+          e.target.value > 906 || isNaN(e.target.value)
+          ? alert("Ingresa un ID valido entre 1 y 906")
+          : setId(e.target.value) 
+          )}
       />
-      <button onClick={handleClick}>Obtener Pokémon</button>
+      <button onClick={HandleClick}>Obtener Pokémon</button>
     </form>
       {pokemon && (
         <div>
