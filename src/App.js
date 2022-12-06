@@ -1,11 +1,9 @@
-import ToDoForm from "./components/ToDoForm";
 import './App.css'
+import Routes from "./components/Routes";
 
 function App() {
   return (
-    <div>
-      <ToDoForm/>
-    </div>
+      <Routes/>
   );
 }
 
